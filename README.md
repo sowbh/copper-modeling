@@ -28,3 +28,11 @@ Approach:
   Interpret the model results and assess its performance based on the defined problem statement.
   Same steps for Regression modelling.(note: dataset contains more noise and linearity between independent variables so itll perform well only with tree based models)
 
+Conclusion:
+*1.] Given dataset contains potential outliers in selling price(TARGET VARIABLE),so applying log transform instead box-cox transformation cause it can handle large ranges of data, and the transformation is easily reversible.*
+
+*2.] It also contains right skewness in trainable parameters quantity tons, using BOX_COX transformation as it is best suited for reasonable imputation for treating outlier.*
+
+*3.] Skewness in thickness, width are treated by making box-cox.*
+
+*4.] Model achieves best R2 score of 0.93 with EXTRA TREE regressor, 300 with RIDGE regressor during 1st training where no outliers were removed. after outlier removal, model achieves same result of 0.95 nearer with EXTRA TREE but with RIDGE regressor 0.93 R2score.*
